@@ -1,6 +1,6 @@
 {
   "name": "css-transform-to-mat4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Will take a string which is a css transform value (2d or 3d) and return a mat4 or 3d transformation matrix from the string.",
   "main": "index.js",
   "license": "MIT",
