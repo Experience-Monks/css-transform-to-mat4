@@ -17,7 +17,7 @@ var matrix3DB = getMatrix('perspective(1000px) translate3d(40px, 20px, -1000px)'
 ```
 
 To see more examples check out:
-http://requirebin.com/?gist=adf102de923cf6f1dc82
+[http://requirebin.com/?gist=adf102de923cf6f1dc82](http://requirebin.com/?gist=adf102de923cf6f1dc82)
 
 ## License
 
