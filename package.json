@@ -17,7 +17,7 @@
     "test": "node test.js"
   },
   "keywords": [
-    "css,transform,matrix,parse,parser"
+    "css,transform,to,matrix,parse,parser,mat4,webgl"
   ],
   "repository": {
     "type": "git",
