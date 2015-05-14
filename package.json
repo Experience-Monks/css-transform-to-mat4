@@ -1,0 +1,30 @@
+{
+  "name": "css-transform-to-mat4",
+  "version": "1.0.0",
+  "description": "Will take a string which is a css transform value (2d or 3d) and return a mat4 or 3d transformation matrix from the string.",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Mikko Haapoja",
+    "email": "me@mikkoh.com",
+    "url": "https://github.com/mikkoh"
+  },
+  "dependencies": {
+    "gl-mat4": "^1.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "css,transform,matrix,parse,parser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jam3/css-transform-to-mat4.git"
+  },
+  "homepage": "https://github.com/Jam3/css-transform-to-mat4",
+  "bugs": {
+    "url": "https://github.com/Jam3/css-transform-to-mat4/issues"
+  }
+}
