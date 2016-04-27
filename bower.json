@@ -1,0 +1,15 @@
+{
+  "name": "css-transform-to-mat4",
+  "version": "1.0.2",
+  "author": {
+      "name": "Mikko Haapoja",
+      "email": "me@mikkoh.com",
+      "url": "https://github.com/mikkoh"
+  },
+  "description": "Will take a string which is a css transform value (2d or 3d) and return a mat4 or 3d transformation matrix from the string.",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "gl-mat4": "^1.1.3"
+  }
+}
