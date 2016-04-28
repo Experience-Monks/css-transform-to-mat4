@@ -1,10 +1,10 @@
-var mat4RotateX = require('gl-mat4/rotateX');
-var mat4RotateY = require('gl-mat4/rotateY');
-var mat4RotateZ = require('gl-mat4/rotateZ');
-var mat4Rotate = require('gl-mat4/rotate');
-var mat4Scale = require('gl-mat4/scale');
-var mat4Translate = require('gl-mat4/translate');
-var mat4Multiply = require('gl-mat4/multiply');
+var mat4RotateX = require('gl-mat4').rotateX;
+var mat4RotateY = require('gl-mat4').rotateY;
+var mat4RotateZ = require('gl-mat4').rotateZ;
+var mat4Rotate = require('gl-mat4').rotate;
+var mat4Scale = require('gl-mat4').scale;
+var mat4Translate = require('gl-mat4').translate;
+var mat4Multiply = require('gl-mat4').multiply;
 
 // Spec was used for reference http://www.w3.org/TR/2009/WD-css3-3d-transforms-20090320/
 module.exports = function cssTransformToMatrix(value) {
