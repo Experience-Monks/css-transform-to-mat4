@@ -36,7 +36,7 @@ module.exports = function cssTransformToMatrix(value) {
         //   e, f, 0, 1)
 
 
-        value = value.split(',').map(Number.parseFloat);
+        value = value.split(',').map(parseFloat);
         matrix = [
           value[ 0 ], value[ 1 ], 0, 0,
           value[ 2 ], value[ 3 ], 0, 0,
@@ -46,13 +46,13 @@ module.exports = function cssTransformToMatrix(value) {
       break;
 
       case 'matrix3d':
-        matrix = value.split(',').map(Number.parseFloat);
+        matrix = value.split(',').map(parseFloat);
       break;
 
       case 'translate':
       case 'translate3d':
         matrix = createMatrix();
-        value = value.split(',').map(Number.parseFloat);
+        value = value.split(',').map(parseFloat);
 
         if(value.length === 2) {
           value.push(0);
@@ -63,19 +63,19 @@ module.exports = function cssTransformToMatrix(value) {
 
       case 'translateX':
         matrix = createMatrix();
-        value = [ Number.parseFloat(value), 0, 0 ];
+        value = [ parseFloat(value), 0, 0 ];
         mat4Translate(matrix, matrix, value);
       break;
 
       case 'translateY':
         matrix = createMatrix();
-        value = [ 0, Number.parseFloat(value), 0 ];
+        value = [ 0, parseFloat(value), 0 ];
         mat4Translate(matrix, matrix, value);
       break;
 
       case 'translateZ':
         matrix = createMatrix();
-        value = [ 0, 0, Number.parseFloat(value) ];
+        value = [ 0, 0, parseFloat(value) ];
         mat4Translate(matrix, matrix, value);
       break;
 
@@ -89,7 +89,7 @@ module.exports = function cssTransformToMatrix(value) {
       case 'scale':
       case 'scale3d':
         matrix = createMatrix();
-        value = value.split(',').map(Number.parseFloat);
+        value = value.split(',').map(parseFloat);
 
         if(value.length === 2) {
           value.push(1);  
@@ -100,17 +100,17 @@ module.exports = function cssTransformToMatrix(value) {
 
       case 'scaleX':
         matrix = createMatrix();
-        mat4Scale(matrix, matrix, [Number.parseFloat(value), 1, 1]);
+        mat4Scale(matrix, matrix, [parseFloat(value), 1, 1]);
       break;
 
       case 'scaleY':
         matrix = createMatrix();
-        mat4Scale(matrix, matrix, [1, Number.parseFloat(value), 1]);
+        mat4Scale(matrix, matrix, [1, parseFloat(value), 1]);
       break;
 
       case 'scaleZ':
         matrix = createMatrix();
-        mat4Scale(matrix, matrix, [1, 1, Number.parseFloat(value)]);
+        mat4Scale(matrix, matrix, [1, 1, parseFloat(value)]);
       break;
 
       case 'rotateX':
@@ -128,14 +128,14 @@ module.exports = function cssTransformToMatrix(value) {
       case 'rotate3d':
         matrix = createMatrix();
         value = value.split(',');
-        mat4Rotate(matrix, matrix, getRadian(value[3]), value.slice(0, 3).map(Number.parseFloat));
+        mat4Rotate(matrix, matrix, getRadian(value[3]), value.slice(0, 3).map(parseFloat));
       break;
 
       case 'perspective':
         // The matrix is computed by starting with an identity matrix and replacing the value at row 3, 
         // column 4 with the value -1/depth. The value for depth must be greater than zero, otherwise 
         // the function is invalid.
-        value = Number.parseFloat(value);
+        value = parseFloat(value);
 
         matrix = [
           1, 0, 0, 0,

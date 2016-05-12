@@ -12,9 +12,11 @@
   "dependencies": {
     "gl-mat4": "^1.1.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "budo": "^8.2.2"
+  },
   "scripts": {
-    "test": "node test.js"
+    "dev": "budo test --live --open"
   },
   "keywords": [
     "css,transform,to,matrix,parse,parser,mat4,webgl"
